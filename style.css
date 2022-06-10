@@ -1,13 +1,20 @@
 @font-face {
-    font-family: Gilroy; /* Гарнитура шрифта */
+    font-family: gilroy-medium; /* Гарнитура шрифта */
     font-style: normal;
     font-weight: 400;
-    src: url(fonts/Gilroy-Bold.ttf); /* Путь к файлу со шрифтом */
+    src: url(fonts/gilroy-medium.ttf); /* Путь к файлу со шрифтом */
     }
+
+@font-face {
+    font-family: gilroy-bold; /* Гарнитура шрифта */
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/gilroy-bold.ttf);/* Путь к файлу со шрифтом */
+        }
 
 body 
     {   background-color: #ffffff;
-        font-family: Gilroy-Bold, Georgia, 'Times New Roman', Times, serif;
+        font-family: gilroy-medium, gilroy-bold, Georgia, 'Times New Roman', Times, serif;
         
 }
 
@@ -26,6 +33,7 @@ a {
 }
 h2 {
     font-size: 34px;
+    font-family: gilroy-bold;
     line-height: 42px;
 }
 
@@ -56,7 +64,7 @@ h2 {
 
 .nav_header  ul{
     display: flex;
-    padding: 32px 0px;
+    padding: 35px 0px;
     justify-content: space-between;
     align-items: center;
     line-height: 22.28px;       
@@ -66,22 +74,25 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 39px 0px 30px 0px;
+    padding: 32px 0px 30px 0px;
 }
 
 .header_info h1{
     width: 123px;
     display: flex;
+    font-family: Gilroy-Bold;
     flex-direction: column;
     text-align: center;
 }
 
 .header_about {
+    margin-top: 45px;
     width: 157px;
 }
 
 .header_lang {
     display: flex;
+    margin-top: 20px;
     transform: rotate(270deg);
 }
 
@@ -146,10 +157,10 @@ h2 {
     text-align: center;
 }
 .about_info h2 {
-    margin: 120px 0px 34px 0px;
+    margin: 120px 0px 20px 0px;
 }
 .about_info p {
-    margin-bottom: 55px;
+    margin-bottom: 45px;
 }
 
 #skils {
@@ -190,7 +201,8 @@ margin: 24px 0px 42px 0px;
 .skils_level{
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
+
     font-size: 32px;
     margin-bottom: 115px;
 }
@@ -220,6 +232,10 @@ margin: 24px 0px 42px 0px;
 }
 .portfolio span {
     margin: 40px 0px 105px 0px;
+}
+
+.portfolio a {
+    text-decoration: underline;
 }
 
 
@@ -265,6 +281,7 @@ margin: 24px 0px 42px 0px;
 }
 
 @media (max-width:600px) {
+    .conteiner{padding: 0px 30px 0px 30px}
     .program {flex-direction: column;}   
     .nav_header{display: none;}
     .header_info { flex-direction: column; align-items: flex-start; margin-left: 15px;}
