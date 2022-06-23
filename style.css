@@ -284,12 +284,14 @@ margin: 24px 0px 42px 0px;
     height: 50px;
 }
 @media (max-width:600px) {
-    .conteiner{padding: 0px 30px 0px 30px}
+    .conteiner{padding: 0px 30px 0px 30px; position: relative;}
       
     hr {
         display: none;
     } 
     .nav_header{
+        position: absolute;
+        width: 100%;
         max-height: 0px;
         overflow: hidden;
     }
@@ -303,9 +305,9 @@ margin: 24px 0px 42px 0px;
         color: #828282;
         
     }
-    .menu > li{
+    /* .menu > li{
        padding-bottom: 68px;
-    }
+    } */
 
     .chk_gamburger:checked ~ .nav_header {max-height: 100%;}
     .chk_gamburger:checked ~ .gamburger .line_gamburger{background-color: transparent;}
@@ -320,6 +322,7 @@ margin: 24px 0px 42px 0px;
    
     .line_gamburger {
         display: block;
+        z-index: 2;
         top: 68px;
         right: 10px;
         float: right;
