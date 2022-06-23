@@ -348,7 +348,7 @@ margin: 24px 0px 42px 0px;
         top: -5px;
     }
     .program {flex-direction: column;}
-    .header_info { flex-direction: column; align-items: flex-start;}
+    .header_info { flex-direction: column; align-items: flex-start; margin-left: 15px;}
     .header_lang{display: none;}
     .slide_header {display: none;}
     .slide_header_mobile {display: flex; justify-content: center;}  
