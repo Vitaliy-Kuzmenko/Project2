@@ -149,11 +149,11 @@ h2 {
     background-color: #F6F6F6;
     justify-content: space-around;
 }
-/*.about_info {
+.about_info {
     max-width: 485px;
     height: 218px;
     text-align: center;
-}*/
+}
 .about_info h2 {
     margin: 120px 0px 20px 0px;
 }
