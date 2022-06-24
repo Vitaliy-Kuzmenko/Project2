@@ -42,8 +42,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: auto;
     font-size: 18px;
     line-height: 21.83px;
     color: #070707;
@@ -55,8 +53,10 @@ h2 {
     height: 664px;
     margin-bottom: 107px;
 }
-
-.menu{
+.menu_mobile {
+display: none;
+}
+.menu_desktop{
     display: flex;
     padding: 35px 0px;
     justify-content: space-between;
@@ -80,7 +80,6 @@ h2 {
     width: 123px;
     display: flex;
     font-family: Gilroy-Bold;
-    flex-direction: column;
     text-align: center;
     font-size: 47px;
     line-height: 59px;
@@ -90,7 +89,9 @@ h2 {
     margin-top: 45px;
     width: 157px;
 }
-
+.header_lang_mobile{
+    display: none;
+}
 .header_lang {
     width: 16px;
     display: flex;
@@ -147,11 +148,10 @@ h2 {
     width: 100%;
     height: 506px;
     background-color: #F6F6F6;
-    justify-content: space-around;
+    justify-content: center;
 }
 .about_info {
     max-width: 485px;
-    height: 218px;
     text-align: center;
 }
 .about_info h2 {
@@ -164,17 +164,15 @@ h2 {
 #skils {
     display: flex;
     flex-direction: column;
-    align-content: center;
     text-align: center;   
     max-width: 936px;
     width: 100%;
-    height: auto;
 }
 #skils h2 {
-    margin: 92px 0px 73px 0px;
+    padding: 92px 0px 73px 0px;
 }
 #skils span {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
 }
 .program {
     display: flex;
@@ -187,7 +185,6 @@ h2 {
     flex-direction: column;
     align-items: center;
     width:166px;
-    height: auto;
 }
 .skils-program span {
 width: 80px;
@@ -200,9 +197,8 @@ margin: 24px 0px 42px 0px;
     display: flex;
     width: 100%;
     justify-content: space-between;
-
     font-size: 32px;
-    margin-bottom: 115px;
+    padding-bottom: 115px;
 }
 
 #potfolio_conteiner {
@@ -217,7 +213,6 @@ margin: 24px 0px 42px 0px;
 .portfolio {
     display: flex;
     flex-direction: column;
-    align-content: center;
     align-items: center;
     max-width: 936px;
     width: 100%;
@@ -226,10 +221,10 @@ margin: 24px 0px 42px 0px;
     width: 100%;
 }
 .portfolio h2 {
-    margin: 105px 0px 55px 0px;
+    padding: 105px 0px 55px 0px;
 }
 .portfolio span {
-    margin: 40px 0px 105px 0px;
+    padding: 40px 0px 105px 0px;
 }
 
 .portfolio a {
@@ -284,7 +279,7 @@ margin: 24px 0px 42px 0px;
     height: 50px;
 }
 @media (max-width:600px) {
-    .conteiner{padding: 0px 30px 0px 30px; position: relative;}
+    .conteiner{margin: 0px 30px 0px 30px; position: relative;}
       
     hr {
         display: none;
@@ -295,19 +290,38 @@ margin: 24px 0px 42px 0px;
         max-height: 0px;
         overflow: hidden;
     }
-    .menu {
+    .header_lang_mobile{
+        display: block;
+        position: absolute;
+        bottom: 89px;
+        right: -28px;
+        font-size: 32px;
+        line-height: 48px;
+        margin-top: 20px;
+        transform: rotate(90deg);
+
+    }
+    .menu_desktop{
+        display: none;
+    }
+    .mobile {
         display: flex;
         flex-direction: column;
         background-color: #fff;
-        align-content: flex-start;
+        height: 100vh;
+    }
+    .menu_mobile {
+        display: flex;
+        flex-direction: column;
+        padding: 66px 26px;
         font-size: 34px;
         line-height: 42px;
         color: #828282;
-        
     }
-    /* .menu > li{
-       padding-bottom: 68px;
-    } */
+    .menu_mobile li {
+        padding-bottom: 68px ;
+    }
+
 
     .chk_gamburger:checked ~ .nav_header {max-height: 100%;}
     .chk_gamburger:checked ~ .gamburger .line_gamburger{background-color: transparent;}
